@@ -15,9 +15,16 @@ export const Home = () => {
             Find Hotels
           </Link>
         </Banner>
+        
       </Hero>
       <br/>
+      <br/>
      <Featured/>
+     <br/>
+     <br/>
+     <br/>
+     
+
     
       
       <Info />

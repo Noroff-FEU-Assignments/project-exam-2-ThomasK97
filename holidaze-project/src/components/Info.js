@@ -1,16 +1,11 @@
 import React, { Component } from 'react'
 import Title from './Title'
-import { FaHamburger, FaCocktail, FaTaxi, FaHotel, FaBus } from 'react-icons/fa'
+import { FaHamburger, FaCocktail, FaTaxi, FaHotel, FaBus, FaTram, FaSubway } from 'react-icons/fa'
 
 export default class Info extends Component {
   state={
     info:[
-      {
-        icon:<FaHotel/>,
-        title: "Hotels",
-        description: "Donec at varius libero. Mauris sagittis lectus in enim ullamcorper posuere.",
-        
-      },
+     
       {
         icon:<FaTaxi/>,
         icon2:<FaBus/>,
@@ -19,17 +14,31 @@ export default class Info extends Component {
         
       },
       {
+        icon:<FaTram/>,
+        icon3:<FaSubway/>,
+        title: "Attractions",
+        description: "Donec at varius libero. Mauris sagittis lectus in enim ullamcorper posuere.",
+        
+      },
+      
+      {
         icon:<FaCocktail/>,
-        title: "Explore The Nightlife",
+        title: "Nightlife",
         description: "Donec at varius libero. Mauris sagittis lectus in enim ullamcorper posuere.",
         
       },
       {
         icon:<FaHamburger/>,
-        title: "Various Diners",
+        title: "Restaurants",
         description: "Donec at varius libero. Mauris sagittis lectus in enim ullamcorper posuere.",
         
-      }
+      },
+ 
+        
+    
+     
+     
+     
     ]
      
       
@@ -38,12 +47,16 @@ export default class Info extends Component {
     return (
       
         <section className="info-section">
-          <Title title='Extra Info'/>
+          <Title title='Explore'/>
+          <br/>
+        <br/>
+        <br/>
           <div className="info-center">
             {this.state.info.map((item,index) => {
               return <article key={index} className="info">
                 <span>{item.icon}</span>
                 <span>{item.icon2}</span>
+                <span>{item.icon3}</span>
                 <h4>{item.title}</h4>
                 <p>{item.description}</p>
               </article>

@@ -63,6 +63,7 @@ body {
     transition: var(--mainTransition);
     text-transform: uppercase;
     cursor: pointer;
+    border-radius: 10px;
   }
   .button-prime:hover {
     background: transparent;
@@ -157,9 +158,18 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .hotelsHero {
   background-image: url("./media/bryggen2.jpg");
   min-height: 80vh;
+}
+.contactHero{
+    min-height: calc(80vh - 66px);
+  background: url("./media/contact.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 /* End Hero */
 
@@ -215,6 +225,7 @@ body {
     grid-row-gap: 2rem;
     grid-column-gap: 50px;
     text-align: center;
+    
     
 }
 
@@ -356,7 +367,6 @@ body {
     display: inline-block;
     height: 40px;
     width: 40px;
-    background-color: var(--whiteColor);
     margin: 0 10px 10px 0;
     text-align: center;
     line-height: 40px;
@@ -369,6 +379,16 @@ body {
 
 }
 
+
+.footer .social-links{
+    
+   color: var(--whiteColor);
+   cursor: pointer;
+ 
+   
+
+
+}
 
 
 
