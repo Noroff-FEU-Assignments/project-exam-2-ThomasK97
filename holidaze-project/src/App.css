@@ -10,6 +10,7 @@
     --thirdColor: #D2E4C4;
     --fourthColor: #E4E9B2;
     --fifthColor: #E7E08B;
+    --blueColor: cadetblue;
     --whiteColor: #ffff;
     --blackColor: rgb(0, 0, 0);
     --lightGrey:rgb(241, 241, 241)f;
@@ -48,6 +49,7 @@ body {
     font-size: 1.2em;
     line-height: 1.25;
     margin-bottom: 1.25em;
+   
   }
  
   .button-prime {
@@ -81,12 +83,14 @@ body {
     background: var(--lightGrey);
     z-index: 1;
    
+   
   }
 
   .nav-header {
     display: flex;
     justify-content: space-between;
     margin: auto;
+    
   
   }
   .nav-button {
@@ -125,7 +129,7 @@ body {
     letter-spacing: var(--mainSpacing);
   }
   .nav-links a:hover {
-    color: cadetblue;
+    color: var(--blueColor);
   }
   
   .vissible-nav {
@@ -137,8 +141,7 @@ body {
 
   img{
       height: 50px;
-      width: auto;
-      margin: auto;
+      
       
   }
 
@@ -148,7 +151,7 @@ body {
   /* Hero */
 .bannerHero,
 .hotelsHero {
-  min-height: calc(100vh - 66px);
+  min-height: calc(80vh - 66px);
   background: url("./media/bryggen1.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -170,6 +173,7 @@ body {
   text-align: center;
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
+  border-radius: 15px;
 }
 .banner h1 {
   font-size: 2.5rem;
@@ -183,7 +187,190 @@ body {
 
 
 
+
+
 /*banner end*/
+
+
+/*Featured title*/
+.featured-title{
+    text-align: center;
+    margin-top: 2rem;
+
+}
+.featured-title h4{
+    font-size: 2rem;
+    letter-spacing: var(--mainSpacing);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+/*Featured title end*/
+
+/*Featured hotels*/
+.featured-center{
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 50px;
+    text-align: center;
+    
+}
+
+
+
+/*Featured hotel end*/
+
+
+/*Info title*/
+
+.info-title{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.info-title h4{
+    font-size: 2rem;
+    letter-spacing: var(--mainSpacing);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+/*info section*/
+
+.info {
+    padding: 5rem 0;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.info{
+    background-color: var(--thirdColor);
+    text-align: center;
+}
+.info-center{
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 50px;
+}
+
+.info span {
+    display: inline-block;
+    color:var(--blueColor);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+
+  /*Footer*/
+
+  /*footer*/
+
+.footer-container{
+    max-width: 1170px;
+    margin: auto;
+    
+    
+
+
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.footer{
+    background-color:var(--seccondColor);
+    padding: 70px 0;
+    padding-left: 80px;
+    
+  
+
+    
+    
+  
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+   
+   
+    
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: var(--blueColor);
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    position: relative;
+   
+    
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+    
+    
+}
+.footer-col ul{
+    list-style: none;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+    
+    
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--whiteColor);
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+    list-style: none;
+}
+.footer-col ul li a:hover{
+
+    padding-left: 10px;
+    
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: var(--whiteColor);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    color: rgb(230, 223, 223);
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+   color: var(--fifthColor);
+
+}
+
+
+
 
 @media screen and (min-width: 576px) {
     .banner {
@@ -192,6 +379,8 @@ body {
     .banner h1 {
       font-size: 3rem;
     }
+    
+    
   }
 
 @media screen and (min-width: 768px) {
@@ -212,6 +401,7 @@ body {
       margin: 0 1rem;
       padding: 0.5rem 0;
     }
+   
   }
 
   
@@ -222,5 +412,10 @@ body {
     .banner h1 {
       font-size: 4rem;
     }
+    .info-center {
+        width: 95vw;
+        max-width: 1170px;
+      }
+    
   }
   

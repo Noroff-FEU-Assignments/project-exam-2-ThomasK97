@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import logo from "../media/logo.png";
-import { FaAlignRight } from "react-icons/fa";
+import { FaAlignJustify } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import {AiOutlineMenu} from "react-icons";
 
@@ -22,7 +22,7 @@ export default class Nav extends Component {
               <img src={logo} />
             </a>
             <button type="button" className="nav-button" onClick={this.handleToggle}>
-                <FaAlignRight className="nav-toggle"/>
+                <FaAlignJustify className="nav-toggle"/>
             </button>
 
             </div>
