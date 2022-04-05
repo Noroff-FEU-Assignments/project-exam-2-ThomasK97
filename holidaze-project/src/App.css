@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primeColor: #818479 ;
+    --seccondColor: #B5CBB7;
+    --thirdColor: #D2E4C4;
+    --fourthColor: #E4E9B2;
+    --fifthColor: #E7E08B;
+    --whiteColor: #ffff;
+    --blackColor: rgb(0, 0, 0);
+    --lightGrey:rgb(241, 241, 241)f;
+    --mainTransition: all 0.3s linear;
+    --mainSpacing: 3px;
+    --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+
+
+
+}
+
+/* globals */
+body {
+    padding-top: 66px;
+    color: var(--blackColor);
+    background: var(--whiteColor);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.4;
+  }
+  h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 0.5em;
+  }
+  h2 {
+    font-size: 2em;
+    margin-bottom: 0.75em;
+  }
+  h3 {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 1em;
+  }
+  h4 {
+    font-size: 1.2em;
+    line-height: 1.25;
+    margin-bottom: 1.25em;
+  }
+ 
+  .button-prime {
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: var(--mainSpacing);
+    color: var(--blackColor);
+    background: var(--thirdColor);
+    padding: 0.4rem 0.9rem;
+    border: 3px solid var(--thirdColor);
+    transition: var(--mainTransition);
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .button-prime:hover {
+    background: transparent;
+    color: var(--thirdColor);
+  }
+  
+  
+  /* end of global */
+
+
+  /* Nav*/
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.75rem 2rem;
+    background: var(--lightGrey);
+    z-index: 1;
+   
+  }
+
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  
+  }
+  .nav-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  .nav-toggle{
+    font-size: 1.5rem;
+    color: var(--primeColor);
+    
+  }
+
+  .nav-links {
+    height: 0;
+    overflow: hidden;
+    transition: var(--mainTransition);
+    list-style-type: none;
+    margin: 12px;
+    background-color: var(--fourthColor);
+   
+    
+  
+    
+  }
+  .nav-links a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem 0;
+    color: var(--blackColor);
+    transition: var(--mainTransition);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: var(--mainSpacing);
+  }
+  .nav-links a:hover {
+    color: cadetblue;
+  }
+  
+  .vissible-nav {
+    height: 230px;
+    width: auto;
+   
+
+  }
+
+  img{
+      height: 50px;
+      width: auto;
+      margin: auto;
+      
+  }
+
+ 
+  /*Nav end*/
+
+  /* Hero */
+.bannerHero,
+.hotelsHero {
+  min-height: calc(100vh - 66px);
+  background: url("./media/bryggen1.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hotelsHero {
+  background-image: url("./media/bryggen2.jpg");
+  min-height: 80vh;
+}
+/* End Hero */
+
+/*banner*/
+
+.banner{
+  display: inline-block;
+  background: rgba(75, 75, 75, 0.5);
+  color: var(--mainWhite);
+  padding: 2rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.banner h1 {
+  font-size: 2.5rem;
+  color: var(--thirdColor);
+}
+.banner div {
+  width: 10rem;
+  height: 5px;
+  background: var(--thirdColor);
+  margin: 1.7rem auto;
+}
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+
+
+/*banner end*/
+
+@media screen and (min-width: 576px) {
+    .banner {
+      padding: 2rem 3rem;
+    }
+    .banner h1 {
+      font-size: 3rem;
+    }
+  }
+  
+@media screen and (min-width: 768px) {
+    .nav-button {
+      display: none;
+    }
+    .nav-center {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+    }
+    .nav-links {
+      height: auto;
+      display: flex;
+      margin: auto
+    }
+    .nav-links a {
+      margin: 0 1rem;
+      padding: 0.5rem 0;
+    }
+  }
+
+  
+  @media screen and (min-width: 992px) {
+    .banner {
+      padding: 2rem 6rem;
+    }
+    .banner h1 {
+      font-size: 4rem;
+    }
+  }
+  
