@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../media/logo.png";
+import logo from "../media/logo2.png";
 import { FaAlignJustify } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import {AiOutlineMenu} from "react-icons";
