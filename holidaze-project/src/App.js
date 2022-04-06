@@ -7,32 +7,25 @@ import { Login } from "./pages/Login";
 import { Contact } from "./pages/Contact";
 import Nav from "./components/Nav";
 
-import { BrowserRouter as Router, Switch, Route, NavLink , Routes} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
     <>
- 
-      <Nav/>
- <Router>
-  
-  
-      <Routes>
-      <Route index element={<Home />} />
-        
-        <Route path="hotels" element={<Hotels />} />
-        <Route path="hotels/:slug" element={<HotelRooms />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="login" element={<Login />} />
-        
-       
-
-      </Routes>
+    <Router>
+      <Nav />
       
-  
+        <Routes>
+          <Route index element={<Home />} />
 
-</Router>
-      
+          <Route path="hotels" element={<Hotels />} />
+          <Route path="hotels/:slug" element={<HotelRooms />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="login" element={<Login />} />
+          <Route path="admin" element={<Admin />} />
+        </Routes>
+      </Router>
     </>
   );
 }

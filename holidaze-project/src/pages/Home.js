@@ -2,9 +2,10 @@ import React from "react";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
-import Info from "../components/Info";
-import Featured from "../components/Featured";
+import Info from "../components/infoTitle/Info";
+import Featured from "../components/featured/Featured"
 import Footer from "../components/Footer";
+import ListHotels from "../components/ListHotels";
 
 export const Home = () => {
   return (
@@ -20,6 +21,7 @@ export const Home = () => {
       <br/>
       <br/>
      <Featured/>
+     
      <br/>
      <br/>
      <br/>

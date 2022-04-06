@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="row">
-          <div class="footer-col">
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="row">
+          <div className="footer-col">
             <h4>Location</h4>
             <ul>
               <li>
@@ -15,7 +15,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div class="footer-col">
+          <div className="footer-col">
             <h4>Contact</h4>
             <ul>
               <li>
@@ -27,7 +27,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div class="footer-col">
+          <div className="footer-col">
             <h4>Business partners</h4>
             <ul>
               <li>
@@ -38,9 +38,9 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div class="footer-col">
+          <div className="footer-col">
             <h4>Follow Us</h4>
-            <div class="social-links">
+            <div className="social-links">
               <FaFacebookF /> <FaInstagram /> <FaTwitter />
             </div>
           </div>

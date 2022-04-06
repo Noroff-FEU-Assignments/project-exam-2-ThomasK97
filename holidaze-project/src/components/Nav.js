@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import logo from "../media/logo2.png";
 import { FaAlignJustify } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import {AiOutlineMenu} from "react-icons";
 
 
 export default class Nav extends Component {
@@ -36,16 +35,16 @@ export default class Nav extends Component {
           <ul className={this.state.isOpen ? "nav-links vissible-nav" : "nav-links"}
           >
             <li>
-            <a href="/hotels">Hotels</a>
+            <Link to="/"> Home</Link>
             </li>
             <li>
-              <a href="/hotels">Hotels</a>
+            <Link to="/hotels"> Hotels</Link>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+            <Link to="/contact"> Contact</Link>
             </li>
             <li>
-              <a href="/login">Login</a>
+            <Link to="/login"> Login</Link>
             </li>
           </ul>
           
