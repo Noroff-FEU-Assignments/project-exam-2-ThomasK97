@@ -233,6 +233,7 @@ body {
   border-radius: 5px;
   padding: 1em;
   box-shadow: var(--darkShadow);
+  background-color: var(--primeColor);
  
 }
 .hotel-container img {

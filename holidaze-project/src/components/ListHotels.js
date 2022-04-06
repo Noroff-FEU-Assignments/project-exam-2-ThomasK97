@@ -24,6 +24,7 @@ return (
           <div className='card' key={hotel.attributes.id}>
               <h3>{hotel.attributes.name}</h3>
             <img src={hotel.attributes.image} alt='' />
+            <button className="button-prime">Book Now</button>
          
             
           </div>
