@@ -5,7 +5,7 @@ import Hero from '../components/Hero'
 export const Contact = () => {
   return (<>
    <Hero hero="contactHero">
-       <h4>Contact</h4>
+       <h1>Contact</h1>
    </Hero>
 
     

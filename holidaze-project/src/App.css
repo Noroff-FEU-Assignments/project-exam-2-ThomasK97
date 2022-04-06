@@ -171,6 +171,7 @@ body {
   justify-content: center;
 
 }
+
 /* End Hero */
 
 /*banner*/
@@ -277,7 +278,15 @@ body {
   }
 
 
-  /*Footer*/
+ 
+
+  .hotelsHero h1{
+    color:var(--whiteColor);
+  }
+
+  .contactHero h1{
+    color: var(--whiteColor);
+  }
 
   /*footer*/
 
@@ -390,7 +399,12 @@ body {
 
 }
 
+ /*Footer end*/
 
+
+
+
+ /*Responsive*/
 
 @media screen and (min-width: 576px) {
     .banner {
@@ -439,3 +453,4 @@ body {
     
   }
   
+  /*Responsive end*/

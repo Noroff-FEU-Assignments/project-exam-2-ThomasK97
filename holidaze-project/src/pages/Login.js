@@ -6,7 +6,7 @@ import { FaBus } from 'react-icons/fa'
 export const Login = () => {
   return ( <>
     <Hero hero="hotelsHero">
-        <h4>Login</h4>
+        <h1>Login</h1>
     </Hero>
     <Footer/>
     </>
