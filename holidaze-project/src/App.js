@@ -18,12 +18,13 @@ function App() {
   
   
       <Routes>
+      <Route index element={<Home />} />
         
         <Route path="hotels" element={<Hotels />} />
         <Route path="hotels/:slug" element={<HotelRooms />} />
         <Route path="contact" element={<Contact />} />
         <Route path="login" element={<Login />} />
-        <Route index element={<Home />} />
+        
        
 
       </Routes>

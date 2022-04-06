@@ -36,7 +36,7 @@ export default class Nav extends Component {
           <ul className={this.state.isOpen ? "nav-links vissible-nav" : "nav-links"}
           >
             <li>
-              <a href="/">Home</a>
+            <a href="/hotels">Hotels</a>
             </li>
             <li>
               <a href="/hotels">Hotels</a>
