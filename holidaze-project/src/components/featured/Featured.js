@@ -10,8 +10,7 @@ export default class Featured extends Component {
         <br/>
         <br/>
         <br/>
-        <br/>
-        <br/>
+       
         <section className="featured-section">
 
             <ListHotels/>
