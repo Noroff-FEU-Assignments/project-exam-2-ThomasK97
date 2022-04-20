@@ -1,47 +1,81 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { HOTElS_URL } from "../utils/Api";
+import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
-const Hotel = ({ match }) => {
-  const [data, setData] = useState([]);
-useEffect(() => {
-    fetchHotel();
-  }, []);
-const fetchHotel = () => {
-    axios
-      .get(
-        `https://thomas-holidaze.herokuapp.com/api/hotels?id=${match.params.id}`
-      )
-      .then((res) => {
-        setData(res.data.data);
-        console.log(res.data);
-      })
-      .catch((err) => console.log(err));
-  };
-return (
+function HotelDetail() {
+	const [hotel, setHotel] = useState(null);
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState(null);
+
+	let navigate = useNavigate();
+
+	const { id } = useParams();
+
+	if (!id) {
+		navigate("/");
+	}
+
+	const url = HOTElS_URL + "/" + id;
+
+	useEffect(
+		function () {
+			async function fetchData() {
+				try {
+					const response = await fetch(url);
+
+					if (response.ok) {
+						const json = await response.json();
+						console.log(json.data);
+						setHotel(json.data);
+					} else {
+						setError("An error occured");
+					}
+				} catch (error) {
+					setError(error.toString());
+				} finally {
+					setLoading(false);
+				}
+			}
+			fetchData();
+		},
+		[]
+	);
+
+	if (loading) {
+		return <div>Loading...</div>;
+	}
+
+	if (error) {
+		return <div>An error occured: {error}</div>;
+	}
+
+	return (
+    <>
+    <div className='hotel-container' key={hotel}>
+      
     <div>
-      {data.map((hotel) => {
-        return (
-          <div className='product-container' key={hotel.attributes.id}>
-            <div>
-            <h3>{hotel.attributes.name}</h3>
-              <img className='prod-image' src={hotel.image} alt='' />
-            </div>
-            <div>
-              
-              <p>{hotel.description}</p>
-              <p>
-                <strong>Price:</strong> {hotel.price}
-              </p>
-            
-            </div>
-          </div>
-        );
-      })}
-      <div className='back'>
+      <img className='hotel-image' src={hotel.attributes.image} alt='' />
+    </div>
+    <h1 className='title'>{hotel.attributes.name}</h1>
+    <div>
+      
+      <p>{hotel.attributes.description}</p>
+      <p>
+        <strong>Price:</strong> {hotel.attributes.price}
+      </p>
+     
+    </div>
+    <div className='back'>
         <Link to='/'>Back</Link>
       </div>
-    </div>
-  );
-};
-export default Hotel;
+  </div>
+  <Footer/>
+  </>
+  
+
+	);
+}
+
+export default HotelDetail;

@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -69,6 +71,12 @@ body {
     background: transparent;
     color: var(--thirdColor);
   }
+  
+  .button-prime a{
+      text-decoration: none;
+      color: black;
+  }
+
   
   
   /* end of global */
@@ -154,19 +162,19 @@ body {
 .bannerHero,
 .hotelsHero {
   min-height: calc(80vh - 66px);
-  background: url("./media/bryggen1.jpg") center/cover no-repeat;
+  background: url("../media/bryggen1.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .hotelsHero {
-  background-image: url("./media/bryggen2.jpg");
+  background-image: url("../media/bryggen2.jpg");
   min-height: 80vh;
 }
 .contactHero{
     min-height: calc(80vh - 66px);
-  background: url("./media/contact.jpg") center/cover no-repeat;
+  background: url("../media/contact.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -245,6 +253,29 @@ body {
 
 
 /*Featured hotel end*/
+
+/*hotel details*/
+
+.hotel-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 6em 6em 2.5em 6em;
+    gap: 6em;
+  }
+  .hotel-image {
+    width: 300px;
+    height: auto;
+  }
+  .name{
+    text-align: left;
+  }
+  .back {
+    text-align: center;
+    margin-bottom: 2em
+  }
+
+/*hotel details*/
+
 
 
 /*Info title*/
