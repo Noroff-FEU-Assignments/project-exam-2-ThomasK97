@@ -132,12 +132,17 @@ h4 {
 }
 
 .vissible-nav {
-  height: 230px;
+  height: 280px;
   width: auto;
 }
 
 img {
   height: 50px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--whiteColor);
 }
 
 /*Nav end*/
@@ -188,6 +193,15 @@ img {
 }
 
 /*banner end*/
+/*Login*/
+.login-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+/*Login end*/
 /*Featured title*/
 .featured-title {
   text-align: center;

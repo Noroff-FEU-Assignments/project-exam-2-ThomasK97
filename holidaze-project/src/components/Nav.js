@@ -1,17 +1,30 @@
-import React, { Component } from "react";
+import React, { Component, createContext } from "react";
 import logo from "../media/logo2.png";
 import { FaAlignJustify } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 
 export default class Nav extends Component {
+ 
+  
+
   state = {
     isOpen: false
   };
   handleToggle = () => {
     this.setState({ isOpen: !this.state.isOpen });
   };
-  render() {
+
+  
+
+  
+  render()
+  
+   {
+
+   
+    
     return (
       <div className="navbar">
         <div className="nav-center">
@@ -46,6 +59,11 @@ export default class Nav extends Component {
             <li>
             <Link to="/login"> Login</Link>
             </li>
+            <li>
+            <Link to="/admin"> Admin</Link>
+            </li>
+            
+
           </ul>
           
         </div>

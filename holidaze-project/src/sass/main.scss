@@ -1,5 +1,7 @@
 
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -121,6 +123,7 @@ body {
     list-style-type: none;
     margin: 12px;
     background-color: var(--fourthColor);
+   
     
    
     
@@ -143,7 +146,7 @@ body {
   }
   
   .vissible-nav {
-    height: 230px;
+    height: 280px;
     width: auto;
    
 
@@ -153,6 +156,13 @@ body {
       height: 50px;
       
       
+  }
+
+  nav a{
+      text-decoration: none;
+      color: var(--whiteColor);
+  
+
   }
 
  
@@ -210,6 +220,22 @@ body {
 
 
 /*banner end*/
+
+
+/*Login*/
+
+.login-input{
+   
+
+	width: 100%;
+	padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+/*Login end*/
+
+
 
 
 /*Featured title*/

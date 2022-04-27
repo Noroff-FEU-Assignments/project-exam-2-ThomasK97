@@ -7,6 +7,8 @@ import HotelRooms from "./pages/HotelRooms";
 import { Login } from "./pages/Login";
 import { Contact } from "./pages/Contact";
 import Nav from "./components/Nav";
+import AuthContext, { AuthProvider } from "./context/AuthContext";
+
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Admin from "./pages/Admin";
@@ -14,8 +16,11 @@ import Admin from "./pages/Admin";
 function App() {
   return (
     <>
+    <AuthProvider>
     <Router>
+    
       <Nav />
+    
       
         <Routes>
           <Route index element={<Home />} />
@@ -27,6 +32,7 @@ function App() {
           <Route path="admin" element={<Admin />} />
         </Routes>
       </Router>
+      </AuthProvider>
     </>
   );
 }

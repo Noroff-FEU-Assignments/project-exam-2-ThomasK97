@@ -55,30 +55,36 @@ const LoginComponent = () => {
       <>
   
      
-      <br />
-      <br />
+     
+   
         <div className="login-box">
             
         <form onSubmit={handleSubmit(onSubmit)}>
           <input className="login-input" {...register("email")} placeholder="Your email..." />
-          
+          <br />
+          <br/>
+         
           {errors.email && <span> {errors.email.message}</span>}
+          
           <br />
           <br/>
           <br/>
-          
           <input className="login-input"
             {...register("password")}
             type="password"
             placeholder="Your password..."
           />
           <br />
+          <br />
+       
+  
         
   
           {errors.password && <span>{errors.password.message}</span>}
   
           <br />
           <br />
+          <br/>
    
   
           <button className="button-prime">Login</button>
