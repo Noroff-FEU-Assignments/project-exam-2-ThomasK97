@@ -9,7 +9,8 @@ export default class Featured extends Component {
      <FeaturedTitle title='Featured Hotels'/>
         <br/>
         <br/>
-        <br/>
+       <br/>
+       
        
         <section className="featured-section">
 
