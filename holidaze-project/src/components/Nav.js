@@ -51,7 +51,7 @@ export default class Nav extends Component {
             <Link to="/"> Home</Link>
             </li>
             <li>
-            <Link to="/hotels"> Hotels</Link>
+            <Link to="/hotels"> Booking</Link>
             </li>
             <li>
             <Link to="/contact"> Contact</Link>

@@ -5,15 +5,15 @@
 }
 
 :root {
-  --primeColor: #818479 ;
-  --seccondColor: #B5CBB7;
-  --thirdColor: #D2E4C4;
-  --fourthColor: #E4E9B2;
-  --fifthColor: #E7E08B;
+  --primeColor: #818479;
+  --seccondColor: #b5cbb7;
+  --thirdColor: #d2e4c4;
+  --fourthColor: #e4e9b2;
+  --fifthColor: #e7e08b;
   --blueColor: cadetblue;
   --whiteColor: #ffff;
   --blackColor: rgb(0, 0, 0);
-  --lightGrey:rgb(241, 241, 241)f;
+  --lightGrey: rgb(241, 241, 241) f;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 3px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
@@ -297,6 +297,10 @@ nav a {
   grid-column-gap: 50px;
 }
 
+.info p {
+  color: black;
+}
+
 .info span {
   display: inline-block;
   color: var(--blueColor);
@@ -322,6 +326,60 @@ nav a {
 
 .login-box span {
   color: var(--whiteColor);
+}
+
+/*contact*/
+.main-content {
+  width: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.main-content h2,
+p,
+span {
+  text-align: center;
+  color: var(--thirdColor);
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
 }
 
 /*footer*/
