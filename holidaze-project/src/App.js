@@ -13,14 +13,17 @@ import AuthContext, { AuthProvider } from "./context/AuthContext";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Admin from "./pages/Admin";
+import NavbarComp from "./components/NavbarComp";
 
 function App() {
   return (
     <>
     <AuthProvider>
     <Router>
+
+      <NavbarComp/>
     
-      <Nav />
+     
     
       
         <Routes>

@@ -6,10 +6,9 @@ import FeaturedTitle from './FeaturedTitle'
 export default class Featured extends Component {
   render() {
     return (<>
-     <FeaturedTitle title='Featured Hotels'/>
-        <br/>
-        <br/>
-       <br/>
+     <FeaturedTitle title='Favourite Hotels'/>
+       
+        
        
        
         <section className="featured-section">

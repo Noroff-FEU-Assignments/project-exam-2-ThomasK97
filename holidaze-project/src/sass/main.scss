@@ -1,7 +1,11 @@
+@import "~bootstrap/scss/bootstrap";
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 :root {
@@ -74,6 +78,67 @@ h4 {
 /* end of global */
 
 /* Nav*/
+
+.navbar-collapse{
+  background-color: var(--thirdColor);
+}
+
+.btn-outline-success{
+
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--whiteColor);
+  background: var(--blueColor);
+  padding: 0.4rem 0.9rem;
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn-outline-success{
+  border-color: var(--blueColor);
+}
+
+
+.btn-outline-success:hover {
+  background: var(--primeColor);
+  color: var(--whiteColor);
+  border-color: var(--primeColor);
+
+ 
+}
+
+
+.form-control{
+  text-align: center;
+  border-color: var(--blueColor);
+ 
+}
+
+.navbar-nav a{
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: var(--blueColor);
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: var(--mainSpacing);
+}
+.nav-link:hover{
+  color: var(--blueColor);
+
+}
+
+.navbar-toggler{
+  background-color: var(--thirdColor);
+
+}
+
+
 .navbar {
   position: fixed;
   top: 0;
@@ -226,10 +291,10 @@ nav a {
   border-radius: 5px;
   padding: 1em;
   box-shadow: var(--darkShadow);
-  background-color: var(--primeColor);
+  background-color: var(--seccondColor);
 }
 .hotel-container img {
-  height: 100px;
+  height: 150px;
   width: auto;
 }
 
