@@ -3,8 +3,7 @@ import React, { useState } from "react"
 
 const ContactForm = () => {
   const [fname, setFname] = useState("")
-  const [lname, setLname] = useState("")
-  const [phone, setPhone] = useState("")
+
   const [email, setEmail] = useState("")
   const [subject, setSubject] = useState("")
   const [message, setMessage] = useState("")
@@ -13,12 +12,10 @@ const ContactForm = () => {
   const formSubmit = (e) => {
     e.preventDefault()
 
-    const newValue = { fname, lname, phone, email, subject, message }
+    const newValue = { fname, email, subject, message }
     setAllValue([...allValue, newValue])
 
     setFname("")
-    setLname("")
-    setPhone("")
     setEmail("")
     setSubject("")
     setMessage("")
@@ -35,25 +32,12 @@ const ContactForm = () => {
               <div className='grid1'>
                 <div className='input'>
                   <span>
-                    First Name <label>*</label>
+                   Name <label>*</label>
                   </span>
                   <br/>
                   <input type='text' name='fname' value={fname} onChange={(e) => setFname(e.target.value)} required />
                 </div>
-                <div className='input'>
-                  <span>
-                    Last Name <label>*</label>
-                  </span>
-                  <br/>
-                  <input type='text' name='lname' value={lname} onChange={(e) => setLname(e.target.value)} required />
-                </div>
-                <div className='input'>
-                  <span>
-                    Phone Number <label>*</label>
-                  </span>
-                  <br/>
-                  <input type='number' name='phone' value={phone} onChange={(e) => setPhone(e.target.value)} />
-                </div>
+                
                 <div className='input'>
                   <span>
                     Email <label>*</label>
@@ -87,7 +71,7 @@ const ContactForm = () => {
 
       <section className='show-data'>
         {allValue.map((cureentValue) => {
-          const { fname, lname, phone, email, subject, message } = cureentValue
+          const { fname, email, subject, message } = cureentValue
           return (
             <>
             <br/>
