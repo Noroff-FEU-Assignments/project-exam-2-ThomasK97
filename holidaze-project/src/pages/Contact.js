@@ -1,8 +1,8 @@
 import React from 'react'
 import Banner from '../components/Banner'
-import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
+import ContactF from '../components/Contact'
 
 export const Contact = () => {
   return (<>
@@ -10,7 +10,8 @@ export const Contact = () => {
    
        
        <Banner>
-       <ContactForm/>
+    <ContactF/>
+      
        </Banner>
     
    </Hero>

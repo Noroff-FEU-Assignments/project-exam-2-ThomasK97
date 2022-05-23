@@ -2,9 +2,20 @@ import React from "react";
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Container } from 'react-bootstrap'
 import AuthContext from "../context/AuthContext";
 import logo from "../media/logo2.png";
-import { useNavigate} from 'react';
+import { Link, useNavigate} from "react-router-dom";
+import { useContext } from "react";
+
+
 
 function NavbarComp() {
+  const [auth, setAuth] = useContext(AuthContext);
+
+	const navigate = useNavigate();
+
+	function logout() {
+		setAuth(null);
+		navigate("/");
+	}
  
     return (
     <div>
@@ -23,7 +34,23 @@ function NavbarComp() {
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/hotels">Booking</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
-              <Nav.Link href="/login">Login</Nav.Link>
+              	
+           
+              
+              {auth ? (
+				<>
+                
+				 <button className="btn-logout" onClick={logout}>Log out</button>
+				</>
+			) : (
+
+				
+				<Nav.Link href="/login">Login</Nav.Link>
+        
+        
+        
+				
+			)}
               
               
             </Nav>

@@ -3,79 +3,96 @@ import { useParams, useNavigate } from "react-router-dom";
 import { HOTElS_URL } from "../utils/Api";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import Hero from "../components/Hero";
+import { FaHamburger,FaCar, FaCity, FaBreadSlice, FaDog} from 'react-icons/fa'
+import Booking from "../components/BookingComp";
 
 function HotelDetail() {
-	const [hotel, setHotel] = useState(null);
-	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState(null);
+  const [hotel, setHotel] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-	let navigate = useNavigate();
+  let navigate = useNavigate();
 
-	const { id } = useParams();
+  const { id } = useParams();
 
-	if (!id) {
-		navigate("/");
-	}
+  if (!id) {
+    navigate("/");
+  }
 
-	const url = HOTElS_URL + "/" + id;
+  const url = HOTElS_URL + "/" + id;
 
-	useEffect(
-		function () {
-			async function fetchData() {
-				try {
-					const response = await fetch(url);
+  useEffect(function () {
+    async function fetchData() {
+      try {
+        const response = await fetch(url);
 
-					if (response.ok) {
-						const json = await response.json();
-						console.log(json.data);
-						setHotel(json.data);
-					} else {
-						setError("An error occured");
-					}
-				} catch (error) {
-					setError(error.toString());
-				} finally {
-					setLoading(false);
-				}
-			}
-			fetchData();
-		},
-		[]
-	);
+        if (response.ok) {
+          const json = await response.json();
+          console.log(json.data);
+          setHotel(json.data);
+        } else {
+          setError("An error occured");
+        }
+      } catch (error) {
+        setError(error.toString());
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchData();
+  }, []);
 
-	if (loading) {
-		return <div>Loading...</div>;
-	}
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-	if (error) {
-		return <div>An error occured: {error}</div>;
-	}
+  if (error) {
+    return <div>An error occured: {error}</div>;
+  }
 
-	return (
+  return (
     <>
-    <div className='hotel-container' key={hotel}>
-      
-    <div>
-      <img className='hotel-image' src={hotel.attributes.image} alt='' />
-    </div>
-    <h1 className='title'>{hotel.attributes.name}</h1>
-    <div>
-      
-      <p>{hotel.attributes.description}</p>
-      <p>
-        <strong>Price:</strong> {hotel.attributes.price}
-      </p>
-     
-    </div>
-    <div className='back'>
-        <Link to='/'>Back</Link>
-      </div>
-  </div>
-  <Footer/>
-  </>
-  
+	<div className="hotel-banenr">
+      <img src={hotel.attributes.image}/>
+	  </div>
 
-	);
+      <div className="detail-container">
+        <h1 className="title">{hotel.attributes.name}</h1>
+        <div>
+          <div className="info-offer">
+            <h3>Facilities</h3>
+            <ul className="info-offer grid">
+              
+              <li> <FaBreadSlice/> Free Breakfast </li>
+              <li><FaCity/> View </li>
+              <li><FaDog/> Pet Friendly </li>
+              <li>
+                
+			  <FaCar/> Parking 
+              </li>
+              <li><FaHamburger/>Restaurant </li>
+            </ul>
+          </div>
+
+          <p> description {hotel.attributes.description}</p>
+
+          <p>
+            <strong>Price:</strong> {hotel.attributes.price}
+          </p>
+        </div>
+
+        <div className="back">
+          <Link to="/">Back</Link>
+        </div>
+      </div>
+	  
+
+
+
+      <Footer />
+    </>
+  );
 }
 
 export default HotelDetail;

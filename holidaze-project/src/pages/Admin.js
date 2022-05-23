@@ -4,6 +4,12 @@ import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import Banner from '../components/Banner'
 import AdminLogout from '../components/admin/AdminLogout'
+import TabComp from '../components/TabComp'
+import { useContext } from "react";
+import {  useNavigate} from "react-router-dom";
+import AuthContext from "../context/AuthContext";
+
+
 
 
 
@@ -11,6 +17,15 @@ import AdminLogout from '../components/admin/AdminLogout'
 
 
 function Admin() {
+
+  const [auth, setAuth] = useContext(AuthContext);
+
+	const navigate = useNavigate();
+
+	function logout() {
+		setAuth(null);
+		navigate("/");
+	}
   return (<>
 
   
@@ -18,16 +33,41 @@ function Admin() {
   
 
       <Banner>
+      {auth ? (
+				<>
+       
+         <h1>Admin</h1>
+       <TabComp/>
+      
+                
+				 
+				</>
+			) : (
 
-       <h1>Admin</h1>
+				
+				<>
+       <h2>You need to be logged in as admin</h2>
 
-       <AdminLogout/>
+     
+        </>
+        
+        
+        
+				
+			)}
+
+      
+       
+  
+       
+
+      
     
        
 
        
        </Banner>
-       
+      
 
        
 
@@ -35,6 +75,7 @@ function Admin() {
        
    </Hero>
  
+   
 
     
     <Footer/>

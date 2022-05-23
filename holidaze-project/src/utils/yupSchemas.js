@@ -3,12 +3,13 @@ import * as yup from "yup";
 export const userLoginSchema = yup.object().shape({
   email: yup.string().required("Please enter your email adress"),
   password: yup.string().required("Please enter your password"),
+
 });
 
 export const bookingSchema = yup.object().shape({
-  title: yup.string().required('Please enter a title'),
+  name: yup.string().required('Please enter your name'),
   message: yup.string().required('Please provide a message'),
-  contact: yup
-    .string()
-    .required('Please provide an email so we can contact you'),
+
+ 
+    
 });

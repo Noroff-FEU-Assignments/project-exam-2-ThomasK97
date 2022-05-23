@@ -28,12 +28,12 @@ return (
         {hotels.map((hotel, idx) => (
           <div className='card' key={idx}>
               <h3>{hotel.attributes.name}</h3>
-            <img src={media} alt='' />
+            <img src={hotel.attributes.image}/>
             <br/>
             <br/>
             
             <button className="button-prime">
-            <Link to={`hotels/${hotel.id}`}>View</Link>
+            <Link to={`../hotels/${hotel.id}`}>View</Link>
             </button>
             
           </div>

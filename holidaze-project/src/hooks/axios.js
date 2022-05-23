@@ -1,6 +1,7 @@
 import axios from 'axios';
 import AuthContext from '../context/AuthContext';
 import { BASE_URL } from '../utils/Api';
+import { useContext } from 'react';
 
 const useAxios = () => {
     const [auth] = useContext(AuthContext);
