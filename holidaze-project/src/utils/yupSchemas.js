@@ -8,7 +8,15 @@ export const userLoginSchema = yup.object().shape({
 
 export const bookingSchema = yup.object().shape({
   name: yup.string().required('Please enter your name'),
-  message: yup.string().required('Please provide a message'),
+  date: yup.string().required('Enter the date'),
+
+ 
+    
+});
+
+export const contactSchema = yup.object().shape({
+  name: yup.string().required('Please enter your name'),
+  message: yup.string().required('Enter message'),
 
  
     

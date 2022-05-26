@@ -4,8 +4,15 @@ import { HOTElS_URL } from "../utils/Api";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
-import { FaHamburger,FaCar, FaCity, FaBreadSlice, FaDog} from 'react-icons/fa'
-import Booking from "../components/BookingComp";
+import {
+  FaHamburger,
+  FaCar,
+  FaCity,
+  FaBreadSlice,
+  FaDog,
+} from "react-icons/fa";
+import Booking from "../components/forms/BookingComp";
+
 
 function HotelDetail() {
   const [hotel, setHotel] = useState(null);
@@ -53,27 +60,34 @@ function HotelDetail() {
 
   return (
     <>
-	<div className="hotel-banenr">
-      <img src={hotel.attributes.image}/>
-	  </div>
+      <div className="hotel-banner">
+        <img src={hotel.attributes.image} />
+      </div>
 
       <div className="detail-container">
         <h1 className="title">{hotel.attributes.name}</h1>
-        <div>
-          <div className="info-offer">
-            <h3>Facilities</h3>
-            <ul className="info-offer grid">
-              
-              <li> <FaBreadSlice/> Free Breakfast </li>
-              <li><FaCity/> View </li>
-              <li><FaDog/> Pet Friendly </li>
+
+		<ul className="info-offer grid">
               <li>
-                
-			  <FaCar/> Parking 
+              
+              Free Breakfast<FaBreadSlice /> 
               </li>
-              <li><FaHamburger/>Restaurant </li>
+              <li>
+              View <FaCity />
+              </li>
+              <li>
+              Pet Friendly <FaDog />  
+              </li>
+              <li>
+              Parking <FaCar /> 
+              </li>
+              <li>
+              Restaurant <FaHamburger />
+               
+              </li>
             </ul>
-          </div>
+        <div>
+          
 
           <p> description {hotel.attributes.description}</p>
 
@@ -81,14 +95,12 @@ function HotelDetail() {
             <strong>Price:</strong> {hotel.attributes.price}
           </p>
         </div>
+		<Booking/>
 
         <div className="back">
-          <Link to="/">Back</Link>
+          
         </div>
       </div>
-	  
-
-
 
       <Footer />
     </>

@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import Info from "../components/infoTitle/Info";
-import Featured from "../components/featured/Featured"
+import Featured from "../components/featured/Featured";
 import Footer from "../components/Footer";
 import ListHotels from "../components/ListHotels";
 
@@ -16,31 +16,21 @@ export const Home = () => {
             Find Hotels
           </Link>
         </Banner>
-        
       </Hero>
-      <br/>
-      <br/>
-     <Featured/>
-     
-     <br/>
-     <br/>
-     <br/>
-     <br/>
-     <br/>
-     <br/>
-     
+      <br />
+      <br />
+      <Featured />
 
+      <br />
+      <br />
+      <br />
 
-    
-      
       <Info />
-      <br/>
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
 
-      <Footer/>
-      
-      
+      <Footer />
     </>
   );
 };

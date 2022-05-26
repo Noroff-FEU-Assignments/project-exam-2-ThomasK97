@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import  media  from '../media/bryggen1.jpg';
+import { HOTElS_LIM } from '../utils/Api';
 
 const FeaturedHotels = () => {
  
@@ -32,7 +33,7 @@ return (
             <br/>
             <br/>
             
-            <button className="button-prime">
+            <button className="button-card">
             <Link to={`../hotels/${hotel.id}`}>View</Link>
             </button>
             

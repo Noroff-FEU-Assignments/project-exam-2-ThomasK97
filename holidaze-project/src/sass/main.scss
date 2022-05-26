@@ -294,8 +294,35 @@ nav a {
   border-radius: 5px;
   padding: 1em;
   box-shadow: var(--darkShadow);
-  background-color: var(--seccondColor);
+  background-color: var(--seccondColor)
 }
+
+.button-card{
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--blackColor);
+  background: var(--blueColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--fifthColor);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 10px;
+  
+}
+.button-card a{
+  text-decoration: none;
+  color: var(--whiteColor);
+}
+
+.button-card:hover {
+  background: var(--fifthColor);
+  
+
+}
+
+
 .hotel-container img {
   height: 150px;
   width: auto;
@@ -306,8 +333,11 @@ nav a {
 /*hotel details*/
 
 .hotel-banner img{
-  width: 10%;
-  height: auto;
+  min-height: calc(60vh - 66px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
   
 }
 .hotel-container {
@@ -356,6 +386,50 @@ nav a {
   margin: auto;
 
 }
+
+.form-container {
+  width: 360px;
+  background-color: var(--fifthColor);
+  margin: auto;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 10px;
+}
+.form-container h3{
+  color: var(--blueColor);
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+
+
+.form-field {
+  margin: 10px 0 10px 0;
+  padding: 15px;
+  font-size: 16px;
+  border: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+
+
+input {
+  background: #f2f2f2;
+}
+
+
+
+button {
+  background: var(--blueColor);
+  color: white;
+  cursor: pointer;
+}
+
+
 
 
 
@@ -517,6 +591,8 @@ input[type="text"] {
   height: auto;
 
 }
+
+
 
 
 

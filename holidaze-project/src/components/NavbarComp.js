@@ -1,29 +1,38 @@
 import React from "react";
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Container } from 'react-bootstrap'
+import {
+  Navbar,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
+  Container,
+} from "react-bootstrap";
 import AuthContext from "../context/AuthContext";
 import logo from "../media/logo2.png";
-import { Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import { useContext } from "react";
-
-
 
 function NavbarComp() {
   const [auth, setAuth] = useContext(AuthContext);
 
-	const navigate = useNavigate();
+  const navigate = useNavigate();
 
-	function logout() {
-		setAuth(null);
-		navigate("/");
-	}
- 
-    return (
+  function logout() {
+    setAuth(null);
+    navigate("/");
+  }
+
+  return (
     <div>
       <Navbar bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#"> <a href="/">
+          <Navbar.Brand href="#">
+            {" "}
+            <a href="/">
               <img src={logo} />
-            </a></Navbar.Brand>
+            </a>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="">
             <Nav
@@ -34,37 +43,27 @@ function NavbarComp() {
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/hotels">Booking</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
-              	
-           
-              
-              {auth ? (
-				<>
-                
-				 <button className="btn-logout" onClick={logout}>Log out</button>
-				</>
-			) : (
 
-				
-				<Nav.Link href="/login">Login</Nav.Link>
-        
-        
-        
-				
-			)}
-              
-              
+              {auth ? (
+                <>
+                  <button className="btn-logout" onClick={logout}>
+                    Log out
+                  </button>
+                </>
+              ) : (
+                <Nav.Link href="/login">Login</Nav.Link>
+              )}
             </Nav>
 
             <Form className="d-flex">
-        <FormControl
-          type="search"
-          placeholder="Search"
-          className="me-2"
-          aria-label="Search"
-        />
-        <Button variant="outline-success">Search</Button>
-      </Form>
-            
+              <FormControl
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-success">Search</Button>
+            </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>

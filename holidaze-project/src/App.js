@@ -14,6 +14,7 @@ import AuthContext, { AuthProvider } from "./context/AuthContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Admin from "./pages/Admin";
 import NavbarComp from "./components/NavbarComp";
+import ListMessages from "./components/admin/ListMessage";
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="login" element={<Login />} />
           <Route path="admin" element={<Admin />} />
+
+  
         </Routes>
       </Router>
       </AuthProvider>
