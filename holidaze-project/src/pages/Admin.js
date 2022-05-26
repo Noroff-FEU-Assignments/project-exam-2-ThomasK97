@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import ListMessages from "../components/admin/ListMessage";
 
+
 function Admin() {
   const [auth, setAuth] = useContext(AuthContext);
 
@@ -27,7 +28,9 @@ function Admin() {
             <>
               <h1>Admin</h1>
 
-              <TabComp />
+             
+              <TabComp/>
+        
             </>
           ) : (
             <>

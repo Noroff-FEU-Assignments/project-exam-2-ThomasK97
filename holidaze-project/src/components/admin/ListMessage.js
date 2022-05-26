@@ -33,7 +33,12 @@ const ListMessages = () => {
     <div className="hotel-container">
       {messages.map((contacts, idx) => (
         <div className="card" key={idx}>
+        
           <h3>{contacts.attributes.name}</h3>
+         
+      
+
+  
 
           <p>Email:{contacts.attributes.email}</p>
           <p>Message:{contacts.attributes.message}</p>
@@ -45,7 +50,10 @@ const ListMessages = () => {
               }, 300);
             }}
           > Delete</button>
+      
+        <div/>
         </div>
+       
       ))}
     </div>
   );
