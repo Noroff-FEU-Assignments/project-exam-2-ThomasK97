@@ -46,9 +46,11 @@ function NavbarComp() {
 
               {auth ? (
                 <>
+                <Nav.Link href="/admin">Admin</Nav.Link>
                   <button className="btn-logout" onClick={logout}>
                     Log out
                   </button>
+                  
                 </>
               ) : (
                 <Nav.Link href="/login">Login</Nav.Link>

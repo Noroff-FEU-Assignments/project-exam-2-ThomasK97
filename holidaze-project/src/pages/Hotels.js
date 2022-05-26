@@ -4,8 +4,6 @@ import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import Info from "../components/infoTitle/Info";
 import Footer from "../components/Footer";
-import media from "../media/bryggen1.jpg";
-import { useState, useEffect } from "react";
 import FeaturedHotels from "../components/ListHotels";
 import { FaSearch } from "react-icons/fa";
 
