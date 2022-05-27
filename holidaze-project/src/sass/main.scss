@@ -294,17 +294,20 @@ nav a {
   border-radius: 5px;
   padding: 1em;
   box-shadow: var(--darkShadow);
-  background-color: var(--seccondColor)
+  background-color: var(--blueColor)
 }
 
+.card h3{
+  color: var(--fourthColor);
+}
 .button-card{
   display: inline-block;
   text-decoration: none;
   letter-spacing: var(--mainSpacing);
   color: var(--blackColor);
-  background: var(--blueColor);
+  background: var(--seccondColor);
   padding: 0.4rem 0.9rem;
-  border: 3px solid var(--fifthColor);
+  border: 3px solid var(--seccondColor);
   transition: var(--mainTransition);
   text-transform: uppercase;
   cursor: pointer;
@@ -317,7 +320,7 @@ nav a {
 }
 
 .button-card:hover {
-  background: var(--fifthColor);
+  background: var(--blueColor);
   
 
 }
@@ -557,6 +560,12 @@ input[type="text"] {
 
 
 /*admin*/
+.message-container{
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 150px;
+}
+
 
 .btn-logout{
 
@@ -577,6 +586,52 @@ input[type="text"] {
 .btn-logout:hover{
 
   background-color: var(--blueColor);
+}
+
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card-messages{
+ max-width: 300px;
+  min-height: 250px;
+  background: var(--blueColor);
+  padding: 30px;
+  box-sizing: border-box;
+  color: #FFF;
+  margin:20px;
+  box-shadow: 0px 2px 18px -4px rgba(0,0,0,0.75);
+}
+
+.card-title{
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+.card-content{
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+.card-btn{
+  all: unset;
+  display: block;
+  margin-left: auto;
+  border: 2px solid #FFF;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 10px;
+  font-weight: 600;
+  transition: all 0.5s;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+}
+.card-btn:hover{
+ color:#02b875;
+ background: #FFF;
 }
 
 

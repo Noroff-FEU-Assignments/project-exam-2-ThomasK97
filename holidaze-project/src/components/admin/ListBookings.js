@@ -36,6 +36,7 @@ const ListBookings = () => {
           <h3>{booking.attributes.name}</h3>
 
           <p>Date:{booking.attributes.date}</p>
+          <p>Checkout:{booking.attributes.date}</p>
           <button className="button-prime" 
             onClick={() => {
               deleteItem(booking.id);

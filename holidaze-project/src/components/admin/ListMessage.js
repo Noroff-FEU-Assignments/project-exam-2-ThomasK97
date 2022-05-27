@@ -30,18 +30,29 @@ const ListMessages = () => {
     http.delete(CONTACT_PATH + "/" + id);
   };
   return (
-    <div className="hotel-container">
+    <div className="wrapper">
       {messages.map((contacts, idx) => (
-        <div className="card" key={idx}>
-        
+        <div className="card-messages" key={idx}>
+        <div className="card-title">
           <h3>{contacts.attributes.name}</h3>
+          </div>
+
+          <div className="card-content">
+
+         
          
       
 
   
 
           <p>Email:{contacts.attributes.email}</p>
-          <p>Message:{contacts.attributes.message}</p>
+          <p>Message:</p>
+          
+          <div className="message-container">
+          <p>{contacts.attributes.message}</p>  
+          </div>
+          <br/>
+          
           <button className="button-prime" 
             onClick={() => {
               deleteItem(contacts.id);
@@ -53,6 +64,8 @@ const ListMessages = () => {
       
         <div/>
         </div>
+        </div>
+
        
       ))}
     </div>
