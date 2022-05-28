@@ -5,29 +5,22 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState, useEffect } from "react";
 
-
-
 const AddHotel = () => {
   const http = useAxios();
 
-
-
-
-  const addHotel= async (addHotelData) => {
+  const addHotel = async (addHotelData) => {
     const options = {
       data: {
         name: addHotelData.name,
         image: addHotelData.image,
         description: addHotelData.description,
-        price: addHotelData.price
-       
-        
-       
+        price: addHotelData.price,
       },
     };
     const responseData = await http.post(HOTElS_URL, options);
     console.log(responseData);
   };
+ 
 
   const {
     register,
@@ -37,23 +30,19 @@ const AddHotel = () => {
     resolver: yupResolver(addSchema),
   });
 
-  
 
   return (
     <>
       <div class="form-container">
-        <form onSubmit={handleSubmit(addHotel)} class="booking-form">
+        <form onSubmit={handleSubmit(addHotel)} className="booking-form">
           <input
             {...register("name")}
             id="hotel"
             className="form-field"
             type="text"
             placeholder="Enter Name of Hotel"
-
-           
-            
           />
-           {errors.name && <span>{errors.name.message}</span>}
+          {errors.name && <span>{errors.name.message}</span>}
           <input
             {...register("image")}
             id="first-name"
@@ -62,10 +51,6 @@ const AddHotel = () => {
             placeholder="URL img"
           />
           {errors.image && <span>{errors.image.message}</span>}
-
-  
-
-
 
           <input
             {...register("description")}
@@ -83,7 +68,7 @@ const AddHotel = () => {
             type="price"
             placeholder="price"
           />
-          {errors.price && <span>{errors.ptice.message}</span>}
+          {errors.price && <span>{errors.price.message}</span>}
 
           <button className="form-field" type="submit">
             Add Hotel

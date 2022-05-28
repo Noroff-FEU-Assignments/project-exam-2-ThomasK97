@@ -9,10 +9,10 @@ export const Login = () => {
   return (
     <>
       <Hero hero="hotelsHero">
-        <Banner>
-          <h1>Login</h1>
+       
+         
           <LoginComponent />
-        </Banner>
+     
       </Hero>
       <Footer />
     </>

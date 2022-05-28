@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import AuthContext from "../../context/AuthContext";
 import { CONTACT_PATH } from "../../utils/Api";
 import useAxios from "../../hooks/axios";

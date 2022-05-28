@@ -8,9 +8,9 @@ export const Contact = () => {
   return (
     <>
       <Hero hero="contactHero">
-        <Banner>
+        
           <ContactF />
-        </Banner>
+        
       </Hero>
 
       <Footer />

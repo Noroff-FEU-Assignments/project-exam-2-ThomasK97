@@ -3,7 +3,6 @@ import { BOOKINGS_PATH, HOTElS_URL } from "../../utils/Api";
 import { bookingSchema } from "../../utils/yupSchemas";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import HotelDetail from "../../pages/HotelRooms";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router";
@@ -22,8 +21,10 @@ const Booking = () => {
        
       },
     };
+    alert('Hotel Booked');
     const responseData = await http.post(BOOKINGS_PATH, options);
     console.log(responseData);
+   
   };
 
   const {
@@ -34,6 +35,7 @@ const Booking = () => {
     resolver: yupResolver(bookingSchema),
   });
 
+ 
   const [hotel, setHotel] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -83,7 +85,7 @@ const Booking = () => {
   return (
     <>
       <div class="form-container">
-        <form onSubmit={handleSubmit(bookingSend)} class="booking-form">
+        <form onSubmit={handleSubmit(bookingSend)} className="booking-form">
           <input
             {...register("hotel")}
             id="hotel"

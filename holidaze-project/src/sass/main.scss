@@ -279,7 +279,7 @@ nav a {
 }
 /*Featured title end*/
 
-/*Featured hotels*/
+/*hotels*/
 
 .hotel-container {
   display: flex;
@@ -295,6 +295,18 @@ nav a {
   padding: 1em;
   box-shadow: var(--darkShadow);
   background-color: var(--blueColor)
+}
+.hotel-price{
+  border: 3px solid var(--seccondColor);
+  text-align: center;
+  padding: 10px;
+ 
+  
+}
+
+.hotel-price p{
+  margin: auto;
+  color: var(--seccondColor);
 }
 
 .card h3{
@@ -331,7 +343,7 @@ nav a {
   width: auto;
 }
 
-/*Featured hotel end*/
+/*hotel end*/
 
 /*hotel details*/
 
@@ -432,6 +444,10 @@ button {
   cursor: pointer;
 }
 
+.form-field button:hover{
+  background-color: var(--primeColor);
+}
+
 
 
 
@@ -491,60 +507,21 @@ button {
   color: var(--whiteColor);
 }
 
+/*info section end*/
+
+
+
+/*contact*/
 .contactHero h1 {
   color: var(--whiteColor);
 }
-
-.login-box {
-  margin: 0 auto;
-  text-align: center;
-  padding: 4rem;
-  border-radius: 2px;
-
-  max-width: 300px;
-}
-
-.login-box span {
-  color: var(--whiteColor);
-}
-
-/*contact*/
 .contact-title{
-  color: var(--fourthColor);
-}
-
-.inputN{
-  width: 100%;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-}
-
-.inputE{
-  width: 100%;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-}
-
-.inputMessage{
-  width: 100%;
-  padding: 50px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  box-sizing: border-box;
-  margin-top: 15px;
-  margin-bottom: 16px;
   text-align: center;
+  
 }
 
-input[type="text"] {
+
+input {
   width: 100%;
   padding: 20px;
   border: 1px solid #ccc;
@@ -552,10 +529,6 @@ input[type="text"] {
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
-}
-
-.contact-container span{
-  color: var(--fifthColor);
 }
 
 
@@ -564,6 +537,9 @@ input[type="text"] {
   overflow-x: hidden;
   overflow-y: auto;
   max-height: 150px;
+  border: 3px solid var(--thirdColor);
+  text-align: left;
+  
 }
 
 
@@ -581,11 +557,16 @@ input[type="text"] {
   cursor: pointer;
   border-radius: 10px;
   background-color: var(--blueColor);
+  margin-left: 1000px;
+ 
+ 
+  
 }
 
 .btn-logout:hover{
 
-  background-color: var(--blueColor);
+
+  border: 3px solid var(--thirdColor);
 }
 
 
@@ -629,17 +610,36 @@ input[type="text"] {
   cursor: pointer;
   letter-spacing: 1.2px;
 }
-.card-btn:hover{
- color:#02b875;
- background: #FFF;
-}
+
+.card-booking{
+  max-width: 300px;
+   min-height: 250px;
+   background: var(--blueColor);
+   padding: 30px;
+   box-sizing: border-box;
+   color: #FFF;
+   margin:20px;
+   box-shadow: 0px 2px 18px -4px rgba(0,0,0,0.75);
+ }
 
 
 
+ .accordion-button:not(.collapsed){
+   background-color: var(--seccondColor);
+ }
 
+ .accordion-button:not(.collapsed){
+   color: var(--whiteColor);
+ }
 
+ .accordion-header{
+   background-color: var(--seccondColor);
 
+ }
 
+ .accordion{
+   background-color: var(--seccondColor);
+ }
 
 
 
@@ -657,86 +657,131 @@ input[type="text"] {
 
 
 /*footer*/
-
-.footer-container {
-  max-width: 1170px;
-  margin: auto;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.footer {
+.site-footer
+{
   background-color: var(--seccondColor);
-  padding: 70px 0;
-  padding-left: 80px;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color: var(--primeColor);
+}
+.site-footer hr
+{
+  border-top-color: var(--fifthColor);
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color: var(--primeColor);
 }
 
-.footer-col {
-  width: 25%;
-  padding: 0 15px;
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:var(--primeColor)
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:var(--fifthColor);
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color: var(--primeColor)
+}
+.copyright-text
+{
+  margin:0
 }
 
-.footer-col h4 {
-  font-size: 18px;
-  color: var(--blueColor);
-  text-transform: capitalize;
-  margin-bottom: 35px;
-  position: relative;
+
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
 }
 
-.footer-col h4::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-
-  height: 2px;
-  box-sizing: border-box;
-  width: 50px;
-}
-.footer-col ul {
-  list-style: none;
-}
-
-.footer-col ul li:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.footer-col ul li a {
-  font-size: 16px;
-  text-transform: capitalize;
-  color: var(--whiteColor);
-  text-decoration: none;
-  font-weight: 300;
-  display: block;
-  transition: all 0.3s ease;
-  list-style: none;
-}
-.footer-col ul li a:hover {
-  padding-left: 10px;
-}
-
-.footer-col .social-links a {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  margin: 0 10px 10px 0;
-  text-align: center;
-  line-height: 40px;
-  color: rgb(230, 223, 223);
-  transition: all 0.5s ease;
-}
-
-.footer-col .social-links a:hover {
+.social-icons a{
   color: var(--fifthColor);
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
 }
 
-.footer .social-links {
-  color: var(--whiteColor);
-  cursor: pointer;
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
 }
+
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.instagram:hover
+{
+  background-color:#c948da
+}
+
+
 
 /*Footer end*/
 
@@ -749,6 +794,9 @@ input[type="text"] {
   .banner h1 {
     font-size: 3rem;
   }
+  
+  
+  
 }
 
 @media screen and (min-width: 768px) {
@@ -769,6 +817,20 @@ input[type="text"] {
     margin: 0 1rem;
     padding: 0.5rem 0;
   }
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -782,6 +844,12 @@ input[type="text"] {
     width: 95vw;
     max-width: 1170px;
   }
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+  
+  
 }
 
 /*Responsive end*/

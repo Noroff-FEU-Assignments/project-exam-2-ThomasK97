@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import AuthContext from "../../context/AuthContext";
 import { BOOKINGS_PATH } from "../../utils/Api";
 import useAxios from "../../hooks/axios";
@@ -21,19 +20,24 @@ const ListBookings = () => {
     setIsLoading(false);
   };
   useEffect(() => {
+      
     setIsLoading(true);
 
     fetchData().catch((error) => setError(error.response.data.error));
   }, [isTriggered, auth]);
+  
 
   const deleteItem = (id) => {
     http.delete(BOOKINGS_PATH + "/" + id);
   };
+  
   return (
-    <div className="hotel-container">
+    <div className="wrapper">
       {bookings.map((booking, idx) => (
-        <div className="card" key={idx}>
+        <div className="card-booking" key={idx}>
+            <div className="card-title">
           <h3>{booking.attributes.name}</h3>
+          </div>
 
           <p>Date:{booking.attributes.date}</p>
           <p>Checkout:{booking.attributes.date}</p>

@@ -8,8 +8,8 @@ export const userLoginSchema = yup.object().shape({
 
 export const bookingSchema = yup.object().shape({
   name: yup.string().required('Please enter your name'),
-  date: yup.string().required('Enter the date'),
-  checkout: yup.string().required('Enter the  checkoudate'),
+  date: yup.string().required('Please Enter the checkin date'),
+  checkout: yup.string().required('Please Enter the  checkout date'),
 
  
     
@@ -17,7 +17,9 @@ export const bookingSchema = yup.object().shape({
 
 export const contactSchema = yup.object().shape({
   name: yup.string().required('Please enter your name'),
-  message: yup.string().required('Enter message'),
+  message: yup.string().required('Please Enter Your message'),
+  email: yup.string().required('Please Enter Your email'),
+  
 
  
     
@@ -29,4 +31,5 @@ export const addSchema = yup.object().shape({
   description: yup.string().required('Enter the description'),
   price: yup.string().required('Enter the price')
 });
+ 
  

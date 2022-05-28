@@ -36,7 +36,7 @@ const LoginComponent = () => {
     navigate("/admin");
   };
 
-  const onSubmit = (formData) => {
+  const loginSubmit = (formData) => {
     console.log("Form Data: ", formData);
     loginUser(formData).catch(console.error);
     console.log("auth: ", auth);
@@ -44,39 +44,47 @@ const LoginComponent = () => {
 
   return (
     <>
-      <div className="login-box">
-        <form onSubmit={handleSubmit(onSubmit)}>
+     <div>
+     <div className="contact-title">
+      <h1>Login</h1>
+      </div>
+      
+      
+      <div class="form-container">
+       
+      
+        <form onSubmit={handleSubmit(loginSubmit)} className="booking-form">
+  
+
           <input
-            className="login-input"
             {...register("email")}
-            placeholder="Your email..."
+            id="email"
+            className="form-field"
+            type="text"
+            placeholder="Enter Your Email"
           />
-          <br />
-          <br />
+          {errors.email && <span>{errors.email.message}</span>}
 
-          {errors.email && <span> {errors.email.message}</span>}
 
-          <br />
-          <br />
-          <br />
+         <br/>
+
           <input
-            className="login-input"
             {...register("password")}
+            id="password"
+            className="form-field"
             type="password"
-            placeholder="Your password..."
+            placeholder="Enter Your Password"
           />
-          <br />
-          <br />
-
           {errors.password && <span>{errors.password.message}</span>}
 
-          <br />
-          <br />
-          <br />
+         
 
-          <button className="button-prime">Login</button>
+          <button className="form-field" type="submit">
+            Login
+          </button>
         </form>
       </div>
+    </div>
     </>
   );
 };

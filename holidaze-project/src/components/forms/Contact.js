@@ -19,6 +19,7 @@ const ContactF = () => {
         message: contactData.message,
       },
     };
+    alert('Message sent');
     const responseData = await http.post(CONTACT_PATH, options);
     console.log(responseData);
   };
@@ -34,39 +35,54 @@ const ContactF = () => {
   return (
     <div>
       <div className="contact-title">
-        <h2>Contact Us</h2>
+      <h1>Contact us</h1>
       </div>
-
-      <form onSubmit={handleSubmit(contactSend)} className="contact-container">
-        <fieldset>
-          <input
+      
+      <div class="form-container">
+       
+      
+        <form onSubmit={handleSubmit(contactSend)} className="booking-form">
+      
+       <input
             {...register("name")}
-            placeholder="Your Name"
-            className="inputN"
+            id="name"
+            className="form-field"
+            type="text"
+            placeholder="Enter Your Name"
+          
+            
           />
-          {errors.name && <span>{errors.name.message}</span>}
-          <br />
+           {errors.name && <span>{errors.name.message}</span>}
+           <br/>
 
           <input
             {...register("email")}
-            placeholder="Your email"
-            className="inputE"
+            id="email"
+            className="form-field"
+            type="text"
+            placeholder="Enter Your email"
           />
           {errors.email && <span>{errors.email.message}</span>}
-          <br />
+
+
+         <br/>
 
           <input
             {...register("message")}
-            placeholder="Message"
-            className="inputMessage"
+            id="message"
+            className="form-field"
+            type="text"
+            placeholder="Enter Your Message"
           />
           {errors.message && <span>{errors.message.message}</span>}
-          <br />
-          <br />
 
-          <button className="button-prime">Send</button>
-        </fieldset>
-      </form>
+         
+
+          <button className="form-field" type="submit">
+            Send
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

@@ -31,6 +31,10 @@ return (
               <h3>{hotel.attributes.name}</h3>
             <img src={hotel.attributes.image}/>
             <br/>
+            <div className='hotel-price'>
+            <p>{hotel.attributes.price} Kr</p>
+            </div>
+            <br/>
             <br/>
             
             <button className="button-card">
