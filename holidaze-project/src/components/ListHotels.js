@@ -32,7 +32,7 @@ return (
             <img src={hotel.attributes.image}/>
             <br/>
             <div className='hotel-price'>
-            <p>{hotel.attributes.price} Kr</p>
+            <p>Crazy Deal: {hotel.attributes.price} Kr</p>
             </div>
             <br/>
             <br/>

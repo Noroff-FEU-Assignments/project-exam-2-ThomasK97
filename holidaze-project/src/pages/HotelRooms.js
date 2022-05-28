@@ -10,9 +10,11 @@ import {
   FaCity,
   FaBreadSlice,
   FaDog,
+  FaStar,
+  FaStarHalf,
+  FaCheckCircle,
 } from "react-icons/fa";
 import Booking from "../components/forms/BookingComp";
-
 
 function HotelDetail() {
   const [hotel, setHotel] = useState(null);
@@ -60,47 +62,67 @@ function HotelDetail() {
 
   return (
     <>
-      <div className="hotel-banner">
-        <img src={hotel.attributes.image} />
-      </div>
+      <div>
+        <div className="cardhotel-wrapper">
+          <div className="card-detail">
+            <div className="product-imgs">
+              <img src={hotel.attributes.image} />
+            </div>
 
-      <div className="detail-container">
-        <h1 className="title">{hotel.attributes.name}</h1>
+            <div className="product-content">
+              <h2 className="product-title">{hotel.attributes.name}</h2>
 
-		<ul className="info-offer grid">
-              <li>
-              
-              Free Breakfast<FaBreadSlice /> 
-              </li>
-              <li>
-              View <FaCity />
-              </li>
-              <li>
-              Pet Friendly <FaDog />  
-              </li>
-              <li>
-              Parking <FaCar /> 
-              </li>
-              <li>
-              Restaurant <FaHamburger />
-               
-              </li>
-            </ul>
-        <div>
-          
+              <div className="product-rating">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStarHalf />
+                <span>4.7(17)</span>
+              </div>
+              <div class="info-grid">
+				  <br/>
+                <h2>Facilities </h2>
 
-          <p> description {hotel.attributes.description}</p>
+                <ul>
+                  <li>
+				
+                    Free Breakfast
+                    <FaBreadSlice />
+                  </li>
+                  <li>
+                    View <FaCity />
+                  </li>
+                  <li>
+                    Pet Friendly <FaDog />
+                  </li>
+                  <li>
+                    Parking <FaCar />
+                  </li>
+                  <li>
+                    Restaurant <FaHamburger />
+                  </li>
+                </ul>
+              </div>
 
-          <p>
-            <strong>Price:</strong> {hotel.attributes.price}
-          </p>
+              <div className="product-price">
+                <p className="price"> From {hotel.attributes.price} kr</p>
+              </div>
+
+              <hr />
+
+			  <h2>Description </h2>
+
+              <div class="product-detail">
+                
+                <p>{hotel.attributes.description}</p>
+              </div>
+            </div>
+          </div>
         </div>
-		<Booking/>
-
-        <div className="back">
-          
-        </div>
       </div>
+      <Booking />
+      <br />
+      <br />
 
       <Footer />
     </>

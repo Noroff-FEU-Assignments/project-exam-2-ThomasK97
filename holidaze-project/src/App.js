@@ -8,6 +8,7 @@ import { Login } from "./pages/Login";
 import { Contact } from "./pages/Contact";
 import Nav from "./components/Nav";
 import AuthContext, { AuthProvider } from "./context/AuthContext";
+import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 
 
 
@@ -20,14 +21,17 @@ function App() {
   return (
     <>
     <AuthProvider>
+  
     <Router>
 
       <NavbarComp/>
+      <NavbarCollapse/>
     
      
     
       
         <Routes>
+          
           <Route index element={<Home />} />
 
           <Route path="hotels" element={<Hotels />} />

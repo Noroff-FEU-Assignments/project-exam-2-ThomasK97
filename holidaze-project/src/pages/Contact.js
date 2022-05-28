@@ -4,14 +4,19 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import ContactF from "../components/forms/Contact";
 
+
 export const Contact = () => {
   return (
     <>
       <Hero hero="contactHero">
         
           <ContactF />
+    
         
       </Hero>
+
+ 
+      
 
       <Footer />
     </>

@@ -15,6 +15,7 @@ const AddHotel = () => {
         image: addHotelData.image,
         description: addHotelData.description,
         price: addHotelData.price,
+       
       },
     };
     const responseData = await http.post(HOTElS_URL, options);
@@ -69,6 +70,7 @@ const AddHotel = () => {
             placeholder="price"
           />
           {errors.price && <span>{errors.price.message}</span>}
+          
 
           <button className="form-field" type="submit">
             Add Hotel
