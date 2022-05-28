@@ -622,6 +622,11 @@ input {
    box-shadow: 0px 2px 18px -4px rgba(0,0,0,0.75);
  }
 
+ button:hover{
+   background-color: var(--seccondColor);
+
+ }
+
 
 
  .accordion-button:not(.collapsed){
@@ -742,7 +747,7 @@ input {
 }
 
 .social-icons a{
-  color: var(--fifthColor);
+  color: var(--whiteColor);
   font-size:16px;
   display:inline-block;
   line-height:44px;
