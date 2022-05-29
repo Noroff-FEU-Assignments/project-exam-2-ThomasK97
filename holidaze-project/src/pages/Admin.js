@@ -34,7 +34,9 @@ function Admin() {
             </>
           ) : (
             <>
-              <h2>You need to be logged in as admin</h2>
+            <div className="admin-alert">
+              <h3>You need to be logged in as admin</h3>
+              </div>
             </>
           )}
         </Banner>

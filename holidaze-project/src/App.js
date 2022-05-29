@@ -1,20 +1,20 @@
 
 import "./sass/main.scss";
 
-import Home from "./pages/Home";
-import Hotels from "./pages/Hotels";
-import HotelRooms from "./pages/HotelRooms";
-import { Login } from "./pages/Login";
-import { Contact } from "./pages/Contact";
+import Home from '../src/pages/Home';
+import Hotels from "../src/pages/Hotels";
+import HotelRooms from "../src/pages/HotelRooms";
+import { Login } from "../src/pages/Login";
+import { Contact } from "../src/pages/Contact";
 import Nav from "./components/Nav";
-import AuthContext, { AuthProvider } from "./context/AuthContext";
-import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
+import AuthContext, { AuthProvider } from "../src/context/AuthContext"
+
 
 
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Admin from "./pages/Admin";
-import NavbarComp from "./components/NavbarComp";
+import Admin from "../src/pages/Admin";
+import NavbarComp from "../src/components/NavbarComp"
 import ListMessages from "./components/admin/ListMessage";
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
     <Router>
 
       <NavbarComp/>
-      <NavbarCollapse/>
+    
     
      
     

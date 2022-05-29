@@ -66,6 +66,7 @@ function HotelDetail() {
         <div className="cardhotel-wrapper">
           <div className="card-detail">
             <div className="product-imgs">
+				
               <img src={hotel.attributes.image} />
             </div>
 

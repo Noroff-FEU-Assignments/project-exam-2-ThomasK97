@@ -358,6 +358,7 @@ nav a {
   display: block;
 }
 
+
 .product-content {
   padding: 2rem 1rem;
 }
@@ -545,6 +546,9 @@ input {
 }
 
 /*admin*/
+.admin-alert{
+  color: var(--whiteColor);
+}
 .message-container {
   overflow-x: hidden;
   overflow-y: auto;
