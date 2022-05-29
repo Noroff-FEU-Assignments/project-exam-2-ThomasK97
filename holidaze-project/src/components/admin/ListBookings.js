@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AuthContext from "../../context/AuthContext";
-import { BOOKINGS_PATH } from "../../utils/Api";
+import { BOOKINGS_PATH, HOTElS_URL } from "../../utils/Api";
 import useAxios from "../../hooks/axios";
 import { useContext } from "react";
 import useToggle from "../../hooks/toggle";
@@ -9,6 +9,9 @@ const ListBookings = () => {
   const [isTriggered, setIsTriggered] = useToggle();
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  
+  const [hotel, setHotel] = useState([]);
+  
 
   const [auth] = useContext(AuthContext);
   const http = useAxios();
@@ -16,6 +19,7 @@ const ListBookings = () => {
   const [bookings, setBookings] = useState([]);
   const fetchData = async () => {
     const data = await http.get(BOOKINGS_PATH);
+   
     setBookings(data.data.data);
     setIsLoading(false);
   };
@@ -33,9 +37,11 @@ const ListBookings = () => {
   
   return (
     <div className="wrapper">
-      {bookings.map((booking, idx) => (
+      {bookings.map((booking, idx,) => (
         <div className="card-booking" key={idx}>
+            
             <div className="card-title">
+           
           <h3>{booking.attributes.name}</h3>
           </div>
 
