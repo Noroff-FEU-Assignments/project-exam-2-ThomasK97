@@ -10,27 +10,27 @@ export default class Info extends Component {
         icon:<FaTaxi/>,
         icon2:<FaBus/>,
         title: "Transport",
-        description: "Donec at varius libero. Mauris sagittis lectus in enim ullamcorper posuere.",
+        description: "Multiple choices of transport opportunities.",
         
       },
       {
         icon:<FaTram/>,
         icon3:<FaSubway/>,
         title: "Attractions",
-        description: "Donec at varius libero. Mauris sagittis lectus in enim ullamcorper posuere.",
+        description: "Discover amazing attractions like Fløyen and Ulrikken.",
         
       },
       
       {
         icon:<FaCocktail/>,
         title: "Nightlife",
-        description: "Donec at varius libero. Mauris sagittis lectus in enim ullamcorper posuere.",
+        description: "Explore the nightlife in Bergen.",
         
       },
       {
         icon:<FaHamburger/>,
         title: "Restaurants",
-        description: "Donec at varius libero. Mauris sagittis lectus in enim ullamcorper posuere.",
+        description: "Get yourself a tasty bite throughout Bergen City.",
         
       },
  

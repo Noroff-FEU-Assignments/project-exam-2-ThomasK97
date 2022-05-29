@@ -15,12 +15,17 @@ const AddHotel = () => {
         image: addHotelData.image,
         description: addHotelData.description,
         price: addHotelData.price,
+        imagetwo: addHotelData.imagetwo,
+        imagethree: addHotelData.imagethree,
+        imagefour: addHotelData.imagefour,
        
       },
     };
     const responseData = await http.post(HOTElS_URL, options);
     console.log(responseData);
+    alert('New Hotel Added!');
   };
+
  
 
   const {
@@ -49,9 +54,34 @@ const AddHotel = () => {
             id="first-name"
             className="form-field"
             type="text"
-            placeholder="URL img"
+            placeholder="Main IMG URL"
           />
           {errors.image && <span>{errors.image.message}</span>}
+          <input
+            {...register("imagetwo")}
+            id="detail-img"
+            className="form-field"
+            type="text"
+            placeholder="detail IMG URL"
+          />
+           {errors.image && <span>{errors.image.message}</span>}
+          
+          <input
+            {...register("imagethree")}
+            id="detail-img"
+            className="form-field"
+            type="text"
+            placeholder="detail IMG URL"
+          />
+           {errors.image && <span>{errors.image.message}</span>}
+           <input
+            {...register("imagefour")}
+            id="detail-img"
+            className="form-field"
+            type="text"
+            placeholder="detail IMG URL"
+          />
+           {errors.image && <span>{errors.image.message}</span>}
 
           <input
             {...register("description")}
@@ -70,6 +100,8 @@ const AddHotel = () => {
             placeholder="price"
           />
           {errors.price && <span>{errors.price.message}</span>}
+
+         
           
 
           <button className="form-field" type="submit">

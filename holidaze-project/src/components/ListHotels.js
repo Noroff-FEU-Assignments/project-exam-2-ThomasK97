@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import  media  from '../media/bryggen1.jpg';
 import { HOTElS_LIM } from '../utils/Api';
 
+
 const FeaturedHotels = () => {
  
   const [hotels, setHotels] = useState([]);
@@ -21,10 +22,13 @@ const fetchHotels = () => {
       console.log(err);
     });
 };
+
+
 return (
 
     <div>
-     
+       
+       
       <div className='hotel-container'>
         {hotels.map((hotel, idx) => (
           <div className='card' key={idx}>
@@ -36,15 +40,18 @@ return (
             </div>
             <br/>
             <br/>
-            
+          
             <button className="button-card">
             <Link to={`../hotels/${hotel.id}`}>View</Link>
             </button>
-            
+          
           </div>
+         
         ))}
       </div>
     </div>
+
+  
     
   );
 };

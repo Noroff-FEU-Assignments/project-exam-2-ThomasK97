@@ -6,16 +6,12 @@ import Hotels from "../src/pages/Hotels";
 import HotelRooms from "../src/pages/HotelRooms";
 import { Login } from "../src/pages/Login";
 import { Contact } from "../src/pages/Contact";
-import Nav from "./components/Nav";
-import AuthContext, { AuthProvider } from "../src/context/AuthContext"
-
-
-
+import  { AuthProvider } from "../src/context/AuthContext"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Admin from "../src/pages/Admin";
 import NavbarComp from "../src/components/NavbarComp"
-import ListMessages from "./components/admin/ListMessage";
+
 
 function App() {
   return (
