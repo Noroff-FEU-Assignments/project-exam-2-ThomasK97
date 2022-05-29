@@ -24,6 +24,8 @@ const AddHotel = () => {
     const responseData = await http.post(HOTElS_URL, options);
     console.log(responseData);
     alert('New Hotel Added!');
+    window.location.reload();
+    
   };
 
  
@@ -105,6 +107,8 @@ const AddHotel = () => {
           
 
           <button className="form-field" type="submit">
+            
+         
             Add Hotel
           </button>
         </form>

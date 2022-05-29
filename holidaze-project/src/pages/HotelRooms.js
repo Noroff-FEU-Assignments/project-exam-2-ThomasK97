@@ -136,8 +136,8 @@ function HotelDetail() {
 
               <ul>
                 <li>
-                  Free Breakfast
-                  <FaBreadSlice />
+                  Free Breakfast <FaBreadSlice />
+                   
                 </li>
                 <li>
                   View <FaCity />

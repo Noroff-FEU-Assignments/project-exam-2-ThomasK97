@@ -22,6 +22,7 @@ const Booking = () => {
       },
     };
     alert('Hotel Booked');
+    window.location.reload();
     const responseData = await http.post(BOOKINGS_PATH, options);
     console.log(responseData);
    

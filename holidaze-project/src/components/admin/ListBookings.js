@@ -10,7 +10,7 @@ const ListBookings = () => {
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(true);
   
-  const [hotel, setHotel] = useState([]);
+  
   
 
   const [auth] = useContext(AuthContext);
@@ -19,28 +19,35 @@ const ListBookings = () => {
   const [bookings, setBookings] = useState([]);
   const fetchData = async () => {
     const data = await http.get(BOOKINGS_PATH);
+    
    
     setBookings(data.data.data);
+   
     setIsLoading(false);
   };
   useEffect(() => {
+    
       
     setIsLoading(true);
 
     fetchData().catch((error) => setError(error.response.data.error));
   }, [isTriggered, auth]);
   
+  
 
   const deleteItem = (id) => {
     http.delete(BOOKINGS_PATH + "/" + id);
   };
+
+  
   
   return (
     <div className="wrapper">
-      {bookings.map((booking, idx,) => (
+      {bookings.map((booking, idx, ) => (
         <div className="card-booking" key={idx}>
             
             <div className="card-title">
+              
            
           <h3>{booking.attributes.name}</h3>
           </div>

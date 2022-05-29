@@ -8,8 +8,10 @@ import {
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 
+
 const ContactF = () => {
   const http = useAxios();
+
 
   const contactSend = async (contactData) => {
     const options = {
@@ -20,6 +22,8 @@ const ContactF = () => {
       },
     };
     alert('Message sent');
+    window.location.reload();
+  
     const responseData = await http.post(CONTACT_PATH, options);
     console.log(responseData);
   };
