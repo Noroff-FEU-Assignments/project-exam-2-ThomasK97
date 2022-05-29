@@ -8,10 +8,8 @@ import {
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 
-
 const ContactF = () => {
   const http = useAxios();
-
 
   const contactSend = async (contactData) => {
     const options = {
@@ -21,9 +19,9 @@ const ContactF = () => {
         message: contactData.message,
       },
     };
-    alert('Message sent');
+    alert("Message sent");
     window.location.reload();
-  
+
     const responseData = await http.post(CONTACT_PATH, options);
     console.log(responseData);
   };
@@ -39,25 +37,20 @@ const ContactF = () => {
   return (
     <div>
       <div className="contact-title">
-      <h1>Contact us</h1>
+        <h1>Contact us</h1>
       </div>
-      
+
       <div class="form-container">
-       
-      
         <form onSubmit={handleSubmit(contactSend)} className="booking-form">
-      
-       <input
+          <input
             {...register("name")}
             id="name"
             className="form-field"
             type="text"
             placeholder="Enter Your Name"
-          
-            
           />
-           {errors.name && <span>{errors.name.message}</span>}
-           <br/>
+          {errors.name && <span>{errors.name.message}</span>}
+          <br />
 
           <input
             {...register("email")}
@@ -68,8 +61,7 @@ const ContactF = () => {
           />
           {errors.email && <span>{errors.email.message}</span>}
 
-
-         <br/>
+          <br />
 
           <input
             {...register("message")}
@@ -79,8 +71,6 @@ const ContactF = () => {
             placeholder="Enter Your Message"
           />
           {errors.message && <span>{errors.message.message}</span>}
-
-         
 
           <button className="form-field" type="submit">
             Send

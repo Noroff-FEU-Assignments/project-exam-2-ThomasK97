@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router";
 
-
 const Booking = () => {
   const http = useAxios();
 
@@ -17,15 +16,13 @@ const Booking = () => {
         name: bookingData.name,
         date: bookingData.date,
         checkout: bookingData.checkout,
-        hotel: bookingData.hotel
-       
+        hotel: bookingData.hotel,
       },
     };
-    alert('Hotel Booked');
+    alert("Hotel Booked");
     window.location.reload();
     const responseData = await http.post(BOOKINGS_PATH, options);
     console.log(responseData);
-   
   };
 
   const {
@@ -36,7 +33,6 @@ const Booking = () => {
     resolver: yupResolver(bookingSchema),
   });
 
- 
   const [hotel, setHotel] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -44,8 +40,6 @@ const Booking = () => {
   let navigate = useNavigate();
 
   const { id } = useParams();
-
-  
 
   const url = HOTElS_URL + "/" + id;
 
@@ -77,11 +71,6 @@ const Booking = () => {
   if (error) {
     return <div>An error occured: {error}</div>;
   }
-  
-  
-
- 
-
 
   return (
     <>
@@ -93,7 +82,6 @@ const Booking = () => {
             className="form-field"
             type="text"
             value={hotel.attributes.name}
-            
           />
           <input
             {...register("name")}

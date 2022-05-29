@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -42,11 +38,11 @@ const Footer = () => {
 
             <div className="col-xs-6 col-md-3">
               <h6>Info</h6>
-              <ul class="footer-links">
+              <ul className="footer-links">
                 <li>
                   <a href="">Contact Us</a>
                 </li>
-                
+
                 <li>
                   <a href="">Privacy Policy</a>
                 </li>
@@ -63,20 +59,19 @@ const Footer = () => {
               <ul className="social-icons">
                 <li>
                   <a className="facebook" href="#">
-                   <FaFacebookF/>
+                    <FaFacebookF />
                   </a>
                 </li>
                 <li>
                   <a className="twitter" href="#">
-                    <FaTwitter/>
+                    <FaTwitter />
                   </a>
                 </li>
                 <li>
                   <a className="instagram" href="#">
-                    <FaInstagram/>
+                    <FaInstagram />
                   </a>
                 </li>
-                
               </ul>
             </div>
           </div>
@@ -84,6 +79,6 @@ const Footer = () => {
       </footer>
     </div>
   );
-}
+};
 
 export default Footer;

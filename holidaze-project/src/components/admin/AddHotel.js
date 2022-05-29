@@ -18,17 +18,13 @@ const AddHotel = () => {
         imagetwo: addHotelData.imagetwo,
         imagethree: addHotelData.imagethree,
         imagefour: addHotelData.imagefour,
-       
       },
     };
     const responseData = await http.post(HOTElS_URL, options);
     console.log(responseData);
-    alert('New Hotel Added!');
+    alert("New Hotel Added!");
     window.location.reload();
-    
   };
-
- 
 
   const {
     register,
@@ -37,7 +33,6 @@ const AddHotel = () => {
   } = useForm({
     resolver: yupResolver(addSchema),
   });
-
 
   return (
     <>
@@ -66,8 +61,8 @@ const AddHotel = () => {
             type="text"
             placeholder="detail IMG URL"
           />
-           {errors.image && <span>{errors.image.message}</span>}
-          
+          {errors.image && <span>{errors.image.message}</span>}
+
           <input
             {...register("imagethree")}
             id="detail-img"
@@ -75,15 +70,15 @@ const AddHotel = () => {
             type="text"
             placeholder="detail IMG URL"
           />
-           {errors.image && <span>{errors.image.message}</span>}
-           <input
+          {errors.image && <span>{errors.image.message}</span>}
+          <input
             {...register("imagefour")}
             id="detail-img"
             className="form-field"
             type="text"
             placeholder="detail IMG URL"
           />
-           {errors.image && <span>{errors.image.message}</span>}
+          {errors.image && <span>{errors.image.message}</span>}
 
           <input
             {...register("description")}
@@ -103,12 +98,7 @@ const AddHotel = () => {
           />
           {errors.price && <span>{errors.price.message}</span>}
 
-         
-          
-
           <button className="form-field" type="submit">
-            
-         
             Add Hotel
           </button>
         </form>

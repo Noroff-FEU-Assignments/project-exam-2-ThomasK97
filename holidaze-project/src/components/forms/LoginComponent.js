@@ -44,47 +44,39 @@ const LoginComponent = () => {
 
   return (
     <>
-     <div>
-     <div className="contact-title">
-      <h1>Login</h1>
+      <div>
+        <div className="contact-title">
+          <h1>Login</h1>
+        </div>
+
+        <div class="form-container">
+          <form onSubmit={handleSubmit(loginSubmit)} className="booking-form">
+            <input
+              {...register("email")}
+              id="email"
+              className="form-field"
+              type="text"
+              placeholder="Enter Your Email"
+            />
+            {errors.email && <span>{errors.email.message}</span>}
+
+            <br />
+
+            <input
+              {...register("password")}
+              id="password"
+              className="form-field"
+              type="password"
+              placeholder="Enter Your Password"
+            />
+            {errors.password && <span>{errors.password.message}</span>}
+
+            <button className="form-field" type="submit">
+              Login
+            </button>
+          </form>
+        </div>
       </div>
-      
-      
-      <div class="form-container">
-       
-      
-        <form onSubmit={handleSubmit(loginSubmit)} className="booking-form">
-  
-
-          <input
-            {...register("email")}
-            id="email"
-            className="form-field"
-            type="text"
-            placeholder="Enter Your Email"
-          />
-          {errors.email && <span>{errors.email.message}</span>}
-
-
-         <br/>
-
-          <input
-            {...register("password")}
-            id="password"
-            className="form-field"
-            type="password"
-            placeholder="Enter Your Password"
-          />
-          {errors.password && <span>{errors.password.message}</span>}
-
-         
-
-          <button className="form-field" type="submit">
-            Login
-          </button>
-        </form>
-      </div>
-    </div>
     </>
   );
 };

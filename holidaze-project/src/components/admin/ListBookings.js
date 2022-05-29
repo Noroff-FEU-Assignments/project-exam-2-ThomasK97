@@ -9,9 +9,6 @@ const ListBookings = () => {
   const [isTriggered, setIsTriggered] = useToggle();
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  
-  
-  
 
   const [auth] = useContext(AuthContext);
   const http = useAxios();
@@ -19,49 +16,43 @@ const ListBookings = () => {
   const [bookings, setBookings] = useState([]);
   const fetchData = async () => {
     const data = await http.get(BOOKINGS_PATH);
-    
-   
+
     setBookings(data.data.data);
-   
+
     setIsLoading(false);
   };
   useEffect(() => {
-    
-      
     setIsLoading(true);
 
     fetchData().catch((error) => setError(error.response.data.error));
   }, [isTriggered, auth]);
-  
-  
 
   const deleteItem = (id) => {
     http.delete(BOOKINGS_PATH + "/" + id);
   };
 
-  
-  
   return (
     <div className="wrapper">
-      {bookings.map((booking, idx, ) => (
+      {bookings.map((booking, idx) => (
         <div className="card-booking" key={idx}>
-            
-            <div className="card-title">
-              
-           
-          <h3>{booking.attributes.name}</h3>
+          <div className="card-title">
+            <h3>{booking.attributes.name}</h3>
           </div>
 
           <p>Date:{booking.attributes.date}</p>
           <p>Checkout:{booking.attributes.date}</p>
-          <button className="button-prime" 
+          <button
+            className="button-prime"
             onClick={() => {
               deleteItem(booking.id);
               setTimeout(() => {
                 fetchData();
               }, 300);
             }}
-          > Delete</button>
+          >
+            {" "}
+            Delete
+          </button>
         </div>
       ))}
     </div>

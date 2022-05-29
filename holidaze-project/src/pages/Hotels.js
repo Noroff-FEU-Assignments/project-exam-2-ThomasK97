@@ -7,12 +7,8 @@ import Footer from "../components/Footer";
 import FeaturedHotels from "../components/ListHotels";
 import { FaSearch } from "react-icons/fa";
 
-
 export const Hotels = () => {
   return (
-
-    
-
     <>
       <Hero hero="hotelsHero">
         <Banner title="Our Hotels">
@@ -27,7 +23,7 @@ export const Hotels = () => {
       <div className="search-bar">
         <input type="text" placeholder="Search for your hotel"></input>
       </div>
-    
+
       <FeaturedHotels />
 
       <Footer />

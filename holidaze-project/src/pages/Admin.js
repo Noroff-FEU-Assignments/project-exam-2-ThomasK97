@@ -10,7 +10,6 @@ import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import ListMessages from "../components/admin/ListMessage";
 
-
 function Admin() {
   const [auth, setAuth] = useContext(AuthContext);
 
@@ -28,15 +27,12 @@ function Admin() {
             <>
               <h1>Admin</h1>
 
-             
-              <TabComp/>
-        
+              <TabComp />
             </>
-            
           ) : (
             <>
-            <div className="admin-alert">
-              <h3>You need to be logged in as admin</h3>
+              <div className="admin-alert">
+                <h3>You need to be logged in as admin</h3>
               </div>
             </>
           )}
