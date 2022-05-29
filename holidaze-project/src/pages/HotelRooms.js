@@ -59,64 +59,111 @@ function HotelDetail() {
   if (error) {
     return <div>An error occured: {error}</div>;
   }
+  const imgs = document.querySelectorAll(".img-select a");
+  const imgBtns = [...imgs];
+  let imgId = 1;
+
+  imgBtns.forEach((imgItem) => {
+    imgItem.addEventListener("click", (event) => {
+      event.preventDefault();
+      imgId = imgItem.dataset.id;
+      slideImage();
+    });
+  });
+
+  function slideImage() {
+    const displayWidth = document.querySelector(
+      ".img-showcase img:first-child"
+    ).clientWidth;
+
+    document.querySelector(".img-showcase").style.transform = `translateX(${
+      -(imgId - 1) * displayWidth
+    }px)`;
+  }
+
+  window.addEventListener("resize", slideImage);
 
   return (
     <>
-      <div>
-        <div className="cardhotel-wrapper">
-          <div className="card-detail">
-            <div className="product-imgs">
-				
-              <img src={hotel.attributes.image} />
+      <div class="cardhotel-wrapper">
+        <div class="card-detail">
+          <div class="product-imgs">
+            <div class="img-display">
+              <div class="img-showcase">
+                <img src={hotel.attributes.image} />
+                <img src={hotel.attributes.imagetwo} />
+                <img src={hotel.attributes.imagethree} />
+                <img src={hotel.attributes.imagefour} />
+              </div>
+            </div>
+            <div class="img-select">
+              <div class="img-item">
+                <a href="#" data-id="1">
+                  <img src={hotel.attributes.image} />
+                </a>
+              </div>
+              <div class="img-item">
+                <a href="#" data-id="2">
+                  <img src={hotel.attributes.imagetwo} />
+                </a>
+              </div>
+              <div class="img-item">
+                <a href="#" data-id="3">
+                  <img src={hotel.attributes.imagethree} />
+                </a>
+              </div>
+              <div class="img-item">
+                <a href="#" data-id="4">
+                  <img src={hotel.attributes.imagefour} />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="product-content">
+            <h2 className="product-title">{hotel.attributes.name}</h2>
+
+            <div className="product-rating">
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStarHalf />
+              <span>4.7(17)</span>
+            </div>
+            <div class="info-grid">
+              <br />
+              <h2>Facilities </h2>
+
+              <ul>
+                <li>
+                  Free Breakfast
+                  <FaBreadSlice />
+                </li>
+                <li>
+                  View <FaCity />
+                </li>
+                <li>
+                  Pet Friendly <FaDog />
+                </li>
+                <li>
+                  Parking <FaCar />
+                </li>
+                <li>
+                  Restaurant <FaHamburger />
+                </li>
+              </ul>
             </div>
 
-            <div className="product-content">
-              <h2 className="product-title">{hotel.attributes.name}</h2>
+            <div className="product-price">
+              <p className="price"> From {hotel.attributes.price} kr</p>
+            </div>
 
-              <div className="product-rating">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStarHalf />
-                <span>4.7(17)</span>
-              </div>
-              <div class="info-grid">
-				  <br/>
-                <h2>Facilities </h2>
+            <hr />
 
-                <ul>
-                  <li>
-				
-                    Free Breakfast
-                    <FaBreadSlice />
-                  </li>
-                  <li>
-                    View <FaCity />
-                  </li>
-                  <li>
-                    Pet Friendly <FaDog />
-                  </li>
-                  <li>
-                    Parking <FaCar />
-                  </li>
-                  <li>
-                    Restaurant <FaHamburger />
-                  </li>
-                </ul>
-              </div>
+            <h2>Description </h2>
 
-              <div className="product-price">
-                <p className="price"> From {hotel.attributes.price} kr</p>
-              </div>
-
-              <hr />
-
-			  <h2>Description </h2>
-
-              <div class="product-detail">
-                
-                <p>{hotel.attributes.description}</p>
-              </div>
+            <div class="product-detail">
+              <p>{hotel.attributes.description}</p>
             </div>
           </div>
         </div>
