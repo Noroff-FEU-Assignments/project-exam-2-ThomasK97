@@ -11,7 +11,6 @@ import DeleteHotels from "./admin/DeleteHotels";
 function TabComp() {
   return (
     <div>
-       
       <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header>Messages</Accordion.Header>
@@ -20,10 +19,11 @@ function TabComp() {
           </Accordion.Body>
           <Accordion.Body></Accordion.Body>
         </Accordion.Item>
+
         <Accordion.Item eventKey="1">
           <Accordion.Header>Bookings</Accordion.Header>
           <Accordion.Body>
-              <ListBookings/>
+            <ListBookings />
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
@@ -35,8 +35,7 @@ function TabComp() {
         <Accordion.Item eventKey="3">
           <Accordion.Header>Hotels</Accordion.Header>
           <Accordion.Body>
-              <DeleteHotels/>
-            
+            <DeleteHotels />
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
