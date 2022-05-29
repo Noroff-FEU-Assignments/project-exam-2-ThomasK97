@@ -52,8 +52,7 @@ return (
             <br/>
             <div className='hotel-price'>
             </div>
-            <br/>
-            <br/>
+           
           
             <button className="button-prime" 
             onClick={() => {

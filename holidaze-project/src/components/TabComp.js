@@ -13,7 +13,7 @@ function TabComp() {
     <div>
        
       <Accordion defaultActiveKey="0">
-        <Accordion.Item eventKey="">
+        <Accordion.Item eventKey="0">
           <Accordion.Header>Messages</Accordion.Header>
           <Accordion.Body>
             <ListMessages />
@@ -27,13 +27,13 @@ function TabComp() {
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
-          <Accordion.Header> Add Hotel</Accordion.Header>
+          <Accordion.Header>Add Hotel</Accordion.Header>
           <Accordion.Body>
             <AddHotel />
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3">
-          <Accordion.Header> Hotels</Accordion.Header>
+          <Accordion.Header>Hotels</Accordion.Header>
           <Accordion.Body>
               <DeleteHotels/>
             
